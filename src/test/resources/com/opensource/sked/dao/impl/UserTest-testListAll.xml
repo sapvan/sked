@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataset SYSTEM "test.dtd" >
+<dataset>
+	<user USER_ID="1" USER_LOGIN="test1"/>
+	<user USER_ID="2" USER_LOGIN="test2"/>
+</dataset>

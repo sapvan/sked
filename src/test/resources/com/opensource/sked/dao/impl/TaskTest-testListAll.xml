@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataset SYSTEM "test.dtd" >
+<dataset>
+	<task TASK_ID="1" task_name="test1"/>
+	<task TASK_ID="2" task_name="test2"/>
+</dataset>

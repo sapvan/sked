@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataset SYSTEM "test.dtd" >
+<dataset>
+	<user_comment user_comment_id="1" comment="test1"/>
+	<user_comment user_comment_id="2" comment="test2"/>
+</dataset>
