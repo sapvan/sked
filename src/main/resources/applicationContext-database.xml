@@ -31,15 +31,15 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedPackages">
 			<list>
-				<value>com.symphonysv.tasker.model</value>
+				<value>com.opensource.sked.model</value>
 			</list>
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.symphonysv.tasker.model.User</value>
-				<value>com.symphonysv.tasker.model.Project</value>
-				<value>com.symphonysv.tasker.model.UserComment</value>
-				<value>com.symphonysv.tasker.model.Task</value>
+				<value>com.opensource.sked.model.User</value>
+				<value>com.opensource.sked.model.Project</value>
+				<value>com.opensource.sked.model.UserComment</value>
+				<value>com.opensource.sked.model.Task</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

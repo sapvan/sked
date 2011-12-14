@@ -6,20 +6,20 @@
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
             http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
-	<context:component-scan base-package="com.symphonysv.tasker.dao" />
-	<context:component-scan base-package="com.symphonysv.tasker.dao.impl" />
+	<context:component-scan base-package="com.opensource.sked.dao" />
+	<context:component-scan base-package="com.opensource.sked.dao.impl" />
 	<context:annotation-config />
-	<bean name="baseDao" class="com.symphonysv.tasker.dao.impl.BaseDaoImpl"
+	<bean name="baseDao" class="com.opensource.sked.dao.impl.BaseDaoImpl"
 		abstract="true">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	<bean name="userDao" class="com.symphonysv.tasker.dao.impl.UserDaoImpl"
+	<bean name="userDao" class="com.opensource.sked.dao.impl.UserDaoImpl"
 		parent="baseDao">
 	</bean>
-	<bean name="taskDao" class="com.symphonysv.tasker.dao.impl.TaskDaoImpl"
+	<bean name="taskDao" class="com.opensource.sked.dao.impl.TaskDaoImpl"
 		parent="baseDao">
 	</bean>
-	<bean name="userCommentDao" class="com.symphonysv.tasker.dao.impl.UserCommentDaoImpl">
+	<bean name="userCommentDao" class="com.opensource.sked.dao.impl.UserCommentDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 </beans>
