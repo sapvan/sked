@@ -3,7 +3,6 @@ package com.opensource.sked.service.impl;
 import static org.easymock.EasyMock.expect;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import org.unitils.UnitilsJUnit3;
 import org.unitils.easymock.EasyMockUnitils;
@@ -14,10 +13,8 @@ import com.opensource.sked.dao.TaskDao;
 import com.opensource.sked.model.Task;
 import com.opensource.sked.model.TaskStatus;
 import com.opensource.sked.model.User;
-import com.opensource.sked.model.UserComment;
 import com.opensource.sked.model.builder.TaskBuilder;
 import com.opensource.sked.service.TaskService;
-import com.opensource.sked.service.impl.TaskServiceImpl;
 
 public class TaskServiceTest extends UnitilsJUnit3 {
     TaskService taskService = new TaskServiceImpl();

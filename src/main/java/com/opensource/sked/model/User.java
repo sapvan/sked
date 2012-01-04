@@ -4,8 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.springframework.security.GrantedAuthority;
+import org.springframework.security.GrantedAuthorityImpl;
+import org.springframework.security.userdetails.UserDetails;
+
 @Entity
-public class User {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue
@@ -53,6 +57,30 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public GrantedAuthority[] getAuthorities() {
+        return new GrantedAuthority[] { new GrantedAuthorityImpl("ROLE_USER") };
+    }
+
+    public String getUsername() {
+        return userLogin;
+    }
+
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    public boolean isEnabled() {
+        return true;
     }
 
 }
