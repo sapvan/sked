@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd">
+	<security:http auto-config='true'>
+		<security:intercept-url pattern="/login.jsp*"
+			filters="none" />
+		<security:intercept-url pattern="/**" access="ROLE_USER" />
+		<security:form-login authentication-failure-url="/login.jsp?login_error=1"
+			login-page='/login.jsp' default-target-url="/home.action" />
+	</security:http>
+
+	<security:authentication-provider
+		user-service-ref='myUserDetailsService' />
+	<bean name="myUserDetailsService" class="com.opensource.sked.service.impl.UserServiceImpl"></bean>
+</beans>
